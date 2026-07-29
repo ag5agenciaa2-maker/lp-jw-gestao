@@ -1,0 +1,8 @@
+.wrangler/
+.twbuild/
+node_modules/
+.env*
+
+# Vídeos acima do limite de 100MB do GitHub — comprimir e reincluir depois
+Assets/jw-gestao-condominios-trajetoria-fundador-video.mp4
+Assets/jw-gestao-condominios-valores-sindico-reel.mp4
