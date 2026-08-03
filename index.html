@@ -9,6 +9,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Figtree:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="cookie-banner.css">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"LocalBusiness","name":"JW Gestão de Condomínios e Facilities","description":"Gestão integrada de condomínios e facilities com síndico profissional, processos documentados e indicadores de desempenho.","telephone":"+5521970590248","url":"https://www.jwcondominios.com.br","address":{"@type":"PostalAddress","streetAddress":"Av. das Américas, 4200 — Bl. 1, sala 305","addressLocality":"Rio de Janeiro","addressRegion":"RJ","postalCode":"22640-907","addressCountry":"BR"},"geo":{"@type":"GeoCoordinates","latitude":-22.99893180,"longitude":-43.35366390},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"09:00","closes":"18:00"}],"areaServed":"Barra da Tijuca, Rio de Janeiro - RJ","sameAs":["https://www.instagram.com/chamaojohn/","https://share.google/YadlORS5SsAcujL6U"]}
 </script>
@@ -17,15 +18,17 @@
 
 <header class="nav" id="nav">
   <a class="nav__brand" href="#topo">JW <span>·</span> Gestão &amp; Facilities</a>
-  <button class="nav__toggle" id="navToggle" aria-label="Abrir menu" aria-expanded="false">≡</button>
   <nav class="nav__links" id="navLinks">
     <a href="#servicos">Serviços</a>
     <a href="#sobre">Sobre</a>
     <a href="#pratica">Na prática</a>
     <a href="#faq">FAQ</a>
     <a href="#contato">Contato</a>
-    <a class="btn btn--solid" href="https://wa.me/5521970590248" target="_blank" rel="noopener">Falar com o síndico</a>
+    <a class="btn btn--solid" href="https://wa.me/5521970590248?text=Ol%C3%A1%2C%20vim%20atrav%C3%A9s%20do%20site%20e%20gostaria%20de%20falar%20com%20o%20s%C3%ADndico%20sobre%20a%20gest%C3%A3o%20do%20meu%20condom%C3%ADnio." target="_blank" rel="noopener">Falar com o síndico</a>
   </nav>
+  <button class="nav__toggle" id="drawerToggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="drawer">
+    <span></span><span></span><span></span>
+  </button>
 </header>
 
 <main>
@@ -54,7 +57,7 @@
     </div>
     <figure class="portrait">
       <span class="portrait__frame"></span>
-      <img src="assets/jw-gestao-condominios-john-wayne-foto-perfil.webp" alt="John Wayne, síndico profissional e fundador da JW Gestão de Condomínios e Facilities, retrato de perfil" loading="lazy" width="260" height="347">
+      <img src="assets/jw-gestao-condominios-john-wayne-foto-perfil.webp" alt="John Wayne, síndico profissional e fundador da JW Gestão de Condomínios e Facilities, retrato de perfil" loading="lazy" width="240" height="320">
       <figcaption>John Wayne<br><span>Fundador · Síndico profissional</span></figcaption>
     </figure>
   </div>
@@ -68,30 +71,80 @@
   </div>
 </div>
 
-<!-- DOR E SOLUÇÃO -->
-<section class="section" id="diagnostico">
-  <p class="label label--bronze">01 — Diagnóstico</p>
-  <div class="split split--diag">
-    <h2 class="display display--lg reveal">Administração amadora custa caro — e o custo aparece tarde.</h2>
-    <div class="pains">
-      <div class="pain reveal"><span class="mono">A.</span><p><strong>Custos sem controle.</strong> Orçamento aprovado em assembleia e executado sem acompanhamento, sem comparativo de fornecedores e sem histórico.</p></div>
-      <div class="pain reveal"><span class="mono">B.</span><p><strong>Manutenção reativa.</strong> Conserta-se depois da falha. O que seria plano preventivo vira obra emergencial, com preço e prazo de emergência.</p></div>
-      <div class="pain reveal"><span class="mono">C.</span><p><strong>Conflito e desgaste.</strong> Sem processo de atendimento e mediação, a convivência se resolve na reclamação — e chega ao conselho já escalada.</p></div>
-      <div class="pain pain--last reveal"><span class="mono">D.</span><p><strong>Prestação de contas frágil.</strong> Números apresentados uma vez por ano, sem indicador, sem série histórica e sem rastreabilidade de decisão.</p></div>
-      <p class="pains__answer reveal">→ A resposta não é mais esforço. É método: processos documentados, indicadores acompanhados e contas abertas o ano inteiro.</p>
+<!-- DOR E SOLUÇÃO — narrativa vertical em 3 atos -->
+<section class="section section--diagnostico" id="diagnostico">
+  <div class="diagnostico__glow" aria-hidden="true"></div>
+
+  <!-- ATO 1 — abertura -->
+  <div class="diagnostico__intro">
+    <p class="label label--bronze">01 — Diagnóstico</p>
+    <h2 class="display display--xl reveal">Administração amadora custa caro. <em>O custo aparece tarde.</em></h2>
+    <p class="diagnostico__lead reveal">A maioria dos condomínios só percebe o tamanho do problema quando já virou obra emergencial, processo ou conflito. O diagnóstico é o primeiro ato da governança.</p>
+  </div>
+
+  <!-- ATO 2 — os 4 problemas, grid 2x2 -->
+  <div class="pains">
+    <article class="pain reveal">
+      <span class="pain__num mono">A.</span>
+      <div class="pain__content">
+        <h3>Custos sem controle</h3>
+        <p>Orçamento aprovado em assembleia e executado sem acompanhamento, sem comparativo de fornecedores e sem histórico.</p>
+      </div>
+    </article>
+    <article class="pain reveal">
+      <span class="pain__num mono">B.</span>
+      <div class="pain__content">
+        <h3>Manutenção reativa</h3>
+        <p>Conserta-se depois da falha. O que seria plano preventivo vira obra emergencial, com preço e prazo de emergência.</p>
+      </div>
+    </article>
+    <article class="pain reveal">
+      <span class="pain__num mono">C.</span>
+      <div class="pain__content">
+        <h3>Conflito e desgaste</h3>
+        <p>Sem processo de atendimento e mediação, a convivência se resolve na reclamação — e chega ao conselho já escalada.</p>
+      </div>
+    </article>
+    <article class="pain reveal">
+      <span class="pain__num mono">D.</span>
+      <div class="pain__content">
+        <h3>Prestação de contas frágil</h3>
+        <p>Números apresentados uma vez por ano, sem indicador, sem série histórica e sem rastreabilidade de decisão.</p>
+      </div>
+    </article>
+  </div>
+
+  <!-- ATO 3 — a solução, clímax editorial em duas colunas -->
+  <div class="solution solution--split reveal">
+    <figure class="solution__figure">
+      <img src="Assets/diagnostico-editorial.png" alt="John Wayne, fundador da JW Gestão, analisando relatórios de governança condominial em escritório de alto padrão na Barra da Tijuca" loading="lazy">
+    </figure>
+    <div class="solution__content">
+      <span class="solution__icon" aria-hidden="true">→</span>
+      <h3 class="solution__title">A resposta é método</h3>
+      <p class="solution__text">O mesmo rigor de governança usado em grandes instituições, aplicado ao dia a dia do condomínio. Menos surpresa, mais previsibilidade.</p>
+      <ul class="solution__list mono">
+        <li><span class="solution__list-num">01</span> Processos documentados por sistema predial</li>
+        <li><span class="solution__list-num">02</span> Indicadores acompanhados mês a mês</li>
+        <li><span class="solution__list-num">03</span> Prestação de contas aberta o ano inteiro</li>
+      </ul>
     </div>
   </div>
 </section>
 
-<!-- SERVIÇOS — bento (SERV-A) -->
-<section class="section" id="servicos">
-  <div class="section__head">
-    <p class="label label--bronze">02 — Escopo</p>
-    <p class="mono muted">09 frentes principais · 24 serviços no escopo completo</p>
+<!-- SERVIÇOS — bento ultra premium (SERV-A) -->
+<section class="section section--servicos" id="servicos">
+  <div class="servicos__glow" aria-hidden="true"></div>
+  <div class="servicos__head">
+    <div>
+      <p class="label label--bronze">02 — Escopo</p>
+      <h2 class="display display--lg reveal">O que fica sob gestão</h2>
+    </div>
+    <p class="servicos__lead mono muted reveal">09 frentes principais · 24 serviços no escopo completo</p>
   </div>
-  <h2 class="display display--lg">O que fica sob gestão</h2>
+
   <div class="bento">
-    <article class="card card--xl reveal">
+    <article class="card card--xl reveal card--featured">
       <span class="card__num">01.</span>
       <div><h3 class="card__title card__title--serif">Síndico Profissional</h3><p>Representação legal e condução da operação diária com rotina documentada, agenda de assembleias e canal direto com o conselho.</p></div>
     </article>
@@ -101,7 +154,7 @@
     </article>
     <article class="card card--sm reveal"><span class="card__num">03.</span><h3 class="card__title">Gestão Administrativa</h3></article>
     <article class="card card--sm reveal"><span class="card__num">04.</span><h3 class="card__title">Gestão Operacional</h3></article>
-    <article class="card card--lg reveal">
+    <article class="card card--lg reveal card--featured">
       <span class="card__num">05.</span>
       <div><h3 class="card__title card__title--serif">Manutenção Predial</h3><p>Plano preventivo por sistema, cronograma anual e registro de cada intervenção — a frente que mais reduz custo futuro.</p></div>
     </article>
@@ -116,30 +169,94 @@
     <article class="card card--md reveal"><span class="card__num">08.</span><h3 class="card__title">Gestão de Obras</h3></article>
     <article class="card card--md reveal"><span class="card__num">09.</span><h3 class="card__title">Facilities</h3></article>
   </div>
-  <p class="scope mono">Escopo completo: Planejamento Orçamentário · Redução de Custos · Compliance Condominial · Gestão de Pessoas · Mediação de Conflitos · Atendimento ao Morador · Organização de Assembleias · Indicadores (KPIs) · Auditoria Operacional · Implantação de Processos · Gestão de Riscos · Consultoria · Comunicação Institucional · Acompanhamento Jurídico · Gestão de Seguros</p>
+
+  <div class="scope-card reveal">
+    <span class="scope-card__line" aria-hidden="true"></span>
+    <p class="scope-card__label mono">Escopo completo</p>
+    <p class="scope-card__text">Planejamento Orçamentário · Redução de Custos · Compliance Condominial · Gestão de Pessoas · Mediação de Conflitos · Atendimento ao Morador · Organização de Assembleias · Indicadores (KPIs) · Auditoria Operacional · Implantação de Processos · Gestão de Riscos · Consultoria · Comunicação Institucional · Acompanhamento Jurídico · Gestão de Seguros</p>
+  </div>
 </section>
 
-<!-- ENCANTAMENTO -->
-<section class="section" id="operacao">
-  <p class="label label--bronze">03 — Operação</p>
-  <div class="gallery">
-    <figure class="gallery__item gallery__item--7 reveal">
-      <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&amp;fit=crop&amp;w=1400&amp;q=80" alt="Área comum de condomínio residencial de alto padrão" loading="lazy">
-      <figcaption class="mono">Áreas comuns · padrão de conservação auditado</figcaption>
-    </figure>
-    <figure class="gallery__item gallery__item--5 reveal">
-      <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&amp;fit=crop&amp;w=1200&amp;q=80" alt="Sala de reunião preparada para conselho condominial" loading="lazy">
-      <figcaption class="mono">Assembleias e conselho · pauta e ata rastreáveis</figcaption>
-    </figure>
-    <figure class="gallery__item gallery__item--4 reveal">
-      <img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&amp;fit=crop&amp;w=1200&amp;q=80" alt="Manutenção preventiva de sistemas prediais" loading="lazy">
-      <figcaption class="mono">Manutenção preventiva · cronograma por sistema</figcaption>
-    </figure>
-    <figure class="gallery__item gallery__item--4 reveal">
-      <img src="https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&amp;fit=crop&amp;w=1200&amp;q=80" alt="Portaria e controle de acesso" loading="lazy">
-      <figcaption class="mono">Portaria e acesso · procedimento escrito</figcaption>
-    </figure>
-    <p class="gallery__note reveal">Cada frente acima tem responsável, rotina e indicador. O que não é medido não entra no contrato.</p>
+<!-- OPERAÇÃO — ultra premium v3: accordion horizontal -->
+<section class="section section--operacao" id="operacao">
+  <div class="operacao__glow" aria-hidden="true"></div>
+
+  <div class="operacao__intro reveal">
+    <p class="label label--bronze">03 — Operação</p>
+    <h2 class="operacao__title">Operação sem improviso.</h2>
+    <p class="operacao__subtitle mono">Cada frente tem responsável, rotina documentada e indicador. O que não é medido não entra no contrato.</p>
+  </div>
+
+  <div class="operacao__accordion" role="tablist" aria-label="Frentes de operação">
+    <article class="operacao__panel operacao__panel--1 reveal" tabindex="0" role="tab" aria-expanded="false">
+      <span class="operacao__panel-bg" aria-hidden="true"></span>
+      <span class="operacao__panel-glow" aria-hidden="true"></span>
+      <span class="operacao__panel-num mono" aria-hidden="true">01</span>
+      <div class="operacao__panel-content">
+        <h3 class="operacao__panel-title">Conservação auditada</h3>
+        <p class="operacao__panel-text">Padrão de limpeza, jardinagem e manutenção de áreas comuns verificado por checklist, não por impressão.</p>
+      </div>
+      <figure class="operacao__panel-media">
+        <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&amp;fit=crop&amp;w=1400&amp;q=80" alt="Área comum de condomínio residencial de alto padrão" loading="lazy">
+      </figure>
+    </article>
+
+    <article class="operacao__panel operacao__panel--2 reveal" tabindex="0" role="tab" aria-expanded="false">
+      <span class="operacao__panel-bg" aria-hidden="true"></span>
+      <span class="operacao__panel-glow" aria-hidden="true"></span>
+      <span class="operacao__panel-num mono" aria-hidden="true">02</span>
+      <div class="operacao__panel-content">
+        <h3 class="operacao__panel-title">Assembleias e conselho</h3>
+        <p class="operacao__panel-text">Pauta, documentação e ata rastreáveis. O conselho decide informado.</p>
+      </div>
+      <figure class="operacao__panel-media">
+        <img src="https://images.unsplash.com/photo-1517502884422-41eaead166d4?auto=format&amp;fit=crop&amp;w=1200&amp;q=80" alt="Sala de reunião preparada para conselho condominial" loading="lazy">
+      </figure>
+    </article>
+
+    <article class="operacao__panel operacao__panel--3 reveal" tabindex="0" role="tab" aria-expanded="false">
+      <span class="operacao__panel-bg" aria-hidden="true"></span>
+      <span class="operacao__panel-glow" aria-hidden="true"></span>
+      <span class="operacao__panel-num mono" aria-hidden="true">03</span>
+      <div class="operacao__panel-content">
+        <h3 class="operacao__panel-title">Manutenção preventiva</h3>
+        <p class="operacao__panel-text">Cronograma por sistema. Intervenções registradas, custos antecipados.</p>
+      </div>
+      <figure class="operacao__panel-media">
+        <img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&amp;fit=crop&amp;w=1200&amp;q=80" alt="Manutenção preventiva de sistemas prediais" loading="lazy">
+      </figure>
+    </article>
+
+    <article class="operacao__panel operacao__panel--4 reveal" tabindex="0" role="tab" aria-expanded="false">
+      <span class="operacao__panel-bg" aria-hidden="true"></span>
+      <span class="operacao__panel-glow" aria-hidden="true"></span>
+      <span class="operacao__panel-num mono" aria-hidden="true">04</span>
+      <div class="operacao__panel-content">
+        <h3 class="operacao__panel-title">Portaria e acesso</h3>
+        <p class="operacao__panel-text">Procedimento escrito, comunicação padronizada e controle de prestadores.</p>
+      </div>
+      <figure class="operacao__panel-media">
+        <img src="https://images.unsplash.com/photo-1524230572899-a752b3835840?auto=format&amp;fit=crop&amp;w=1200&amp;q=80" alt="Portaria e controle de acesso" loading="lazy">
+      </figure>
+    </article>
+  </div>
+
+  <div class="operacao__foot reveal">
+    <div class="operacao__stats">
+      <div class="operacao__stat">
+        <span class="mono">09</span>
+        <span>frentes de gestão</span>
+      </div>
+      <div class="operacao__stat">
+        <span class="mono">24</span>
+        <span>serviços no escopo</span>
+      </div>
+      <div class="operacao__stat">
+        <span class="mono">KPI</span>
+        <span>indicadores mensais</span>
+      </div>
+    </div>
+    <a class="btn btn--solid" href="https://wa.me/5521970590248?text=Ol%C3%A1%2C%20vim%20atrav%C3%A9s%20do%20site%20e%20gostaria%20de%20conhecer%20a%20opera%C3%A7%C3%A3o%20da%20JW%20no%20meu%20condom%C3%ADnio." target="_blank" rel="noopener">Conhecer a operação</a>
   </div>
 </section>
 
@@ -224,45 +341,76 @@
 </section>
 
 <!-- FAQ -->
-<section class="section" id="faq">
-  <div class="split split--faq">
-    <div class="faq__head">
-      <p class="label label--bronze">06 — Perguntas</p>
-      <h2 class="display">O que o conselho costuma perguntar</h2>
-      <!-- BLOCO PENDENTE: substituir pelas 20 perguntas reais fornecidas pelo cliente -->
-      <p class="mono muted">Bloco de exemplo · aguardando as 20 perguntas reais do cliente</p>
-    </div>
-    <div class="faq" id="faqList">
-      <details class="reveal"><summary>O que faz um síndico profissional?<span>+</span></summary><p>Assume a representação legal e a condução da operação do condomínio — administrativa, financeira, operacional e de manutenção — com rotina documentada, indicadores e prestação de contas periódica ao conselho e à assembleia.</p></details>
-      <details class="reveal"><summary>Vocês substituem a administradora?<span>+</span></summary><p>Não necessariamente. A administradora processa; o síndico profissional decide, cobra e responde. Trabalhamos com a administradora atual do condomínio ou apoiamos a assembleia na escolha de uma nova.</p></details>
-      <details class="reveal"><summary>Como funciona a prestação de contas?<span>+</span></summary><p>Relatório periódico com execução orçamentária, indicadores de manutenção e atendimento, contratos vigentes e decisões tomadas no período — com documentos rastreáveis por item.</p></details>
-      <details class="reveal"><summary>Quais indicadores vocês acompanham?<span>+</span></summary><p>Execução orçamentária, inadimplência, cumprimento do plano preventivo, tempo de resposta a chamados, desempenho de fornecedores e recorrência de ocorrências por sistema predial.</p></details>
-      <details class="reveal"><summary>Como é feita a avaliação de fornecedores?<span>+</span></summary><p>Cada prestador é avaliado de forma contínua por escopo entregue, prazo, qualidade e conformidade contratual. O histórico sustenta renovação, renegociação ou substituição.</p></details>
-      <details class="reveal"><summary>Atendem condomínios comerciais?<span>+</span></summary><p>Sim. A atuação cobre condomínios residenciais e comerciais, incluindo gestão integrada de facilities.</p></details>
-      <details class="reveal"><summary>Qual a região de atendimento?<span>+</span></summary><p>Atuação concentrada na Barra da Tijuca, com abrangência no Estado do Rio de Janeiro. Escritório na Av. das Américas, 4200.</p></details>
-      <details class="reveal"><summary>Como funciona a manutenção preventiva?<span>+</span></summary><p>Levantamento dos sistemas prediais, cronograma anual por sistema, execução acompanhada e registro de cada intervenção — reduzindo emergências e custo futuro.</p></details>
-      <details class="reveal"><summary>Como é a contratação?<span>+</span></summary><p>Diagnóstico inicial, proposta de escopo e apresentação em assembleia. A aprovação é do condomínio — o material é preparado para essa decisão coletiva.</p></details>
-      <details class="reveal"><summary>Qual o horário de atendimento?<span>+</span></summary><p>Segunda a sexta, das 9h às 18h. Sábados, domingos e feriados: fechado. Ocorrências operacionais seguem o protocolo definido em contrato.</p></details>
-    </div>
+<section class="section section--faq" id="faq">
+  <div class="faq__glow" aria-hidden="true"></div>
+  <div class="faq__head">
+    <p class="label label--bronze">06 — Perguntas</p>
+    <h2 class="display display--xl">O que o conselho <em>costuma perguntar.</em></h2>
+    <p class="faq__lead">As dúvidas mais diretas sobre atuação, contratação e operação — reunidas para apoiar a decisão do conselho e da assembleia.</p>
+  </div>
+
+  <div class="faq" id="faqList">
+    <button type="button" class="faq__item reveal" data-question="O que faz um síndico profissional?" data-answer="O síndico profissional é responsável pela administração completa do condomínio, atuando na gestão administrativa, financeira, operacional, manutenção, relacionamento com moradores, fornecedores e cumprimento das obrigações legais."><span class="faq__num mono">01.</span><span class="faq__q">O que faz um síndico profissional?</span><span class="faq__toggle">+</span></button>
+    <button type="button" class="faq__item reveal" data-question="A JW substitui a administradora do condomínio?" data-answer="Não. A administradora e o síndico profissional possuem funções complementares. A administradora presta suporte administrativo, financeiro e contábil, enquanto a JW realiza a gestão estratégica e operacional do condomínio."><span class="faq__num mono">02.</span><span class="faq__q">A JW substitui a administradora do condomínio?</span><span class="faq__toggle">+</span></button>
+    <button type="button" class="faq__item reveal" data-question="Como funciona a contratação da JW?" data-answer="A contratação é aprovada em assembleia condominial. Após a aprovação, é firmado um contrato de prestação de serviços e iniciamos o processo de transição e diagnóstico do condomínio."><span class="faq__num mono">03.</span><span class="faq__q">Como funciona a contratação da JW?</span><span class="faq__toggle">+</span></button>
+    <button type="button" class="faq__item reveal" data-question="Como é feita a prestação de contas?" data-answer="A prestação de contas é realizada com total transparência, em conjunto com a administradora do condomínio, por meio de relatórios financeiros e apresentação periódica aos condôminos."><span class="faq__num mono">04.</span><span class="faq__q">Como é feita a prestação de contas?</span><span class="faq__toggle">+</span></button>
+    <button type="button" class="faq__item reveal" data-question="Como a JW controla os fornecedores?" data-answer="Realizamos processos de cotação, análise técnica, negociação, fiscalização dos serviços e avaliação periódica do desempenho dos fornecedores."><span class="faq__num mono">05.</span><span class="faq__q">Como a JW controla os fornecedores?</span><span class="faq__toggle">+</span></button>
+    <button type="button" class="faq__item reveal" data-question="Vocês acompanham obras e reformas?" data-answer="Sim. Fiscalizamos obras, acompanhamos cronogramas, controlamos contratos, verificamos a qualidade da execução e monitoramos custos e prazos."><span class="faq__num mono">06.</span><span class="faq__q">Vocês acompanham obras e reformas?</span><span class="faq__toggle">+</span></button>
+    <button type="button" class="faq__item reveal" data-question="A JW realiza atendimento de emergência?" data-answer="Sim. Atuamos na coordenação das ocorrências emergenciais do condomínio, acionando as equipes e fornecedores responsáveis para uma resposta rápida e eficiente."><span class="faq__num mono">07.</span><span class="faq__q">A JW realiza atendimento de emergência?</span><span class="faq__toggle">+</span></button>
+    <button type="button" class="faq__item reveal" data-question="Qual a região de atendimento?" data-answer="Atuação concentrada na Barra da Tijuca, com abrangência no Estado do Rio de Janeiro. Escritório na Av. das Américas, 4200."><span class="faq__num mono">08.</span><span class="faq__q">Qual a região de atendimento?</span><span class="faq__toggle">+</span></button>
+    <button type="button" class="faq__item reveal" data-question="Como posso solicitar uma proposta?" data-answer="Basta entrar em contato conosco pelos nossos canais de atendimento. Agendaremos uma conversa para entender as necessidades do condomínio e elaborar uma proposta personalizada."><span class="faq__num mono">09.</span><span class="faq__q">Como posso solicitar uma proposta?</span><span class="faq__toggle">+</span></button>
+    <button type="button" class="faq__item reveal" data-question="O que diferencia a JW Gestão de Condomínios e Facilities?" data-answer="Nosso diferencial está na gestão profissional baseada em processos, indicadores de desempenho (KPIs), transparência, planejamento estratégico, valorização do patrimônio, comunicação eficiente e foco na melhoria contínua dos serviços."><span class="faq__num mono">10.</span><span class="faq__q">O que diferencia a JW Gestão de Condomínios e Facilities?</span><span class="faq__toggle">+</span></button>
+  </div>
+
+  <div class="faq__cta reveal">
+    <p>Não encontrou a resposta que precisava?</p>
+    <a class="btn btn--ghost" href="https://wa.me/5521970590248?text=Ol%C3%A1%2C%20vim%20atrav%C3%A9s%20do%20site%20e%20gostaria%20de%20tirar%20uma%20d%C3%BAvida%20com%20a%20equipe." target="_blank" rel="noopener">Falar com a equipe</a>
   </div>
 </section>
 
 <!-- LOCALIZAÇÃO -->
-<section class="section" id="local">
-  <p class="label label--bronze">07 — Localização</p>
-  <div class="split split--local">
-    <div>
-      <h2 class="display">Barra da Tijuca<br>Rio de Janeiro</h2>
-      <p class="address">Av. das Américas, 4200 — Bl. 1, sala 305<br>Barra da Tijuca, Rio de Janeiro — RJ<br>22640-907</p>
-      <p class="mono muted hours">Seg–Sex 9h–18h<br>Sáb, Dom e feriados: fechado</p>
-      <div class="hero__ctas">
-        <a class="btn btn--solid" href="https://www.google.com/maps/dir/?api=1&amp;destination=-22.99893180,-43.35366390" target="_blank" rel="noopener">Como chegar</a>
-        <a class="btn btn--ghost" href="https://wa.me/5521970590248" target="_blank" rel="noopener">WhatsApp</a>
+<section class="section section--flush" id="local">
+  <div class="location__head section__head--pad">
+    <p class="label label--bronze">07 — Localização</p>
+    <h2 class="display reveal">Barra da Tijuca<br>Rio de Janeiro</h2>
+  </div>
+
+  <div class="mapframe reveal">
+    <iframe title="Mapa — JW Gestão de Condomínios e Facilities, Av. das Américas, 4200" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3490.955234594478!2d-43.3536639!3d-22.998931799999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9bdbce88c22e45%3A0xa59087091e35ce86!2sJW%20Gest%C3%A3o%20de%20Condom%C3%ADnios%20e%20Facilities%20na%20Barra%20da%20Tijuca%20%7C%20Administra%C3%A7%C3%A3o%20%7C%20S%C3%ADndico%20%7C%20Manuten%C3%A7%C3%A3o%20Predial!5e0!3m2!1spt-BR!2sbr!4v1785283789007!5m2!1spt-BR!2sbr" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+  </div>
+
+  <div class="location__strip">
+    <div class="location__item reveal">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" width="20" height="20" aria-hidden="true" class="location__icon"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+      <div>
+        <span class="location__label">Endereço</span>
+        <p>Av. das Américas, 4200 — Bl. 1, sala 305<br>Barra da Tijuca, Rio de Janeiro — RJ · 22640-907</p>
+        <div class="hero__ctas location__ctas">
+          <a class="btn btn--ghost location__btn" href="https://www.google.com/maps/dir/?api=1&amp;destination=-22.99893180,-43.35366390" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="14" height="14" aria-hidden="true"><path d="M3 11l19-9-9 19-2-8-8-2Z"/></svg>
+            Como chegar
+          </a>
+        </div>
       </div>
     </div>
-    <div class="mapframe">
-      <!-- BLOCO PENDENTE: substituir pelo iframe do mapa fornecido no dossiê (verbatim) -->
-      <iframe title="Mapa — Av. das Américas, 4200, Barra da Tijuca" src="https://www.google.com/maps?q=-22.99893180,-43.35366390&amp;z=16&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+    <div class="location__item reveal">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" width="20" height="20" aria-hidden="true" class="location__icon"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+      <div>
+        <span class="location__label">Horário</span>
+        <p>Seg – Sex 9h às 18h<br>Sáb, Dom e feriados: fechado</p>
+      </div>
+    </div>
+
+    <div class="location__item reveal">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" width="20" height="20" aria-hidden="true" class="location__icon"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92Z"/></svg>
+      <div>
+        <span class="location__label">Fale conosco</span>
+        <p>Agende uma visita técnica ou tire suas dúvidas diretamente pelo WhatsApp.</p>
+        <div class="hero__ctas location__ctas">
+          <a class="btn btn--solid" href="https://wa.me/5521970590248?text=Ol%C3%A1%2C%20vim%20atrav%C3%A9s%20do%20site%20e%20gostaria%20de%20agendar%20uma%20visita%20t%C3%A9cnica." target="_blank" rel="noopener">WhatsApp</a>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -270,23 +418,45 @@
 <!-- CTA + FORMULÁRIO -->
 <section class="section section--rule" id="contato">
   <div class="split split--contact">
-    <div>
+    <div class="proposal">
       <p class="label label--bronze">08 — Proposta</p>
-      <h2 class="display display--lg">Leve uma gestão auditável para a próxima assembleia.</h2>
-      <p class="lead muted">Envie os dados do condomínio. Retornamos com um diagnóstico inicial e uma proposta de escopo preparada para apresentação ao conselho.</p>
-      <p class="mono contact__info"><a href="tel:+5521970590248">(21) 97059-0248</a><br><a href="https://www.instagram.com/chamaojohn/" target="_blank" rel="noopener">@chamaojohn</a></p>
+      <h2 class="display display--lg reveal">Leve uma gestão auditável para a próxima assembleia.</h2>
+      <p class="lead muted reveal">Envie os dados do condomínio. Retornamos com um diagnóstico inicial e uma proposta de escopo preparada para apresentação ao conselho.</p>
+
+      <ol class="proposal__steps">
+        <li class="proposal__step reveal">
+          <span class="proposal__num mono">01.</span>
+          <div><h3>Envio dos dados</h3><p>Condomínio, unidades e contato — leva menos de um minuto.</p></div>
+        </li>
+        <li class="proposal__step reveal">
+          <span class="proposal__num mono">02.</span>
+          <div><h3>Diagnóstico inicial</h3><p>Analisamos o cenário atual de gestão, manutenção e prestação de contas.</p></div>
+        </li>
+        <li class="proposal__step reveal">
+          <span class="proposal__num mono">03.</span>
+          <div><h3>Proposta para o conselho</h3><p>Escopo preparado para apresentação em assembleia, pronto para decisão.</p></div>
+        </li>
+      </ol>
     </div>
-    <form class="form" id="form" novalidate>
-      <label><span class="label">Nome *</span><input name="nome" type="text" required autocomplete="name"><em data-error></em></label>
-      <label><span class="label">Condomínio *</span><input name="condominio" type="text" required><em data-error></em></label>
-      <div class="form__row">
-        <label><span class="label">Nº de unidades</span><input name="unidades" type="number" min="1" inputmode="numeric"><em data-error></em></label>
-        <label><span class="label">Telefone / WhatsApp *</span><input name="telefone" type="tel" required placeholder="(21) 90000-0000" autocomplete="tel"><em data-error></em></label>
-      </div>
-      <label><span class="label">Mensagem</span><textarea name="mensagem" rows="4"></textarea><em data-error></em></label>
-      <button class="btn btn--solid" type="submit">Enviar pelo WhatsApp</button>
-      <p class="form__status mono" id="formStatus" role="status"></p>
-    </form>
+
+    <div class="proposal__card reveal">
+      <span class="proposal__frame"></span>
+      <form class="form" id="form" novalidate>
+        <label><span class="label">Nome *</span><input name="nome" type="text" required autocomplete="name"><em data-error></em></label>
+        <label><span class="label">Condomínio *</span><input name="condominio" type="text" required><em data-error></em></label>
+        <div class="form__row">
+          <label><span class="label">Nº de unidades</span><input name="unidades" type="number" min="1" inputmode="numeric"><em data-error></em></label>
+          <label><span class="label">Telefone / WhatsApp *</span><input name="telefone" type="tel" required placeholder="(21) 90000-0000" autocomplete="tel"><em data-error></em></label>
+        </div>
+        <label><span class="label">Mensagem</span><textarea name="mensagem" rows="4"></textarea><em data-error></em></label>
+        <button class="btn btn--solid form__submit" type="submit">
+          Enviar pelo WhatsApp
+          <svg viewBox="0 0 24 24" fill="currentColor" width="15" height="15" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        </button>
+        <p class="form__status mono" id="formStatus" role="status"></p>
+        <p class="form__privacy mono muted">Seus dados são usados apenas para retorno comercial. <a href="politica-de-privacidade.html">Política de Privacidade</a>.</p>
+      </form>
+    </div>
   </div>
 </section>
 
@@ -294,19 +464,14 @@
 
 <footer class="footer">
   <div class="footer__grid">
-    <div>
+    <div class="footer__brand">
       <p class="footer__name">JW Gestão de Condomínios<br>e Facilities</p>
       <p class="muted">Gestão integrada de condomínios e facilities conduzida com práticas de governança corporativa.</p>
-    </div>
-    <div>
-      <p class="label label--bronze">Contato</p>
-      <ul class="footer__list">
-        <li><a href="https://share.google/YadlORS5SsAcujL6U" target="_blank" rel="noopener">◈ JW Gestão — Google Business</a></li>
-        <li><a href="https://www.google.com/maps/dir/?api=1&amp;destination=-22.99893180,-43.35366390" target="_blank" rel="noopener">◎ Av. das Américas, 4200 — sala 305</a></li>
-        <li><a href="tel:+5521970590248">☎ (21) 97059-0248</a></li>
-        <li><a href="https://wa.me/5521970590248" target="_blank" rel="noopener">✆ WhatsApp</a></li>
-        <li><a href="https://www.instagram.com/chamaojohn/" target="_blank" rel="noopener">◍ @chamaojohn</a></li>
-      </ul>
+      <div class="footer__social">
+        <a href="https://www.instagram.com/chamaojohn/" target="_blank" rel="noopener" aria-label="Instagram @chamaojohn">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18" aria-hidden="true"><path d="M12 2c-2.717 0-3.056.012-4.123.06-1.064.05-1.79.217-2.427.465a4.902 4.902 0 0 0-1.772 1.153A4.902 4.902 0 0 0 2.525 5.45c-.248.637-.415 1.363-.465 2.427C2.012 8.944 2 9.283 2 12s.012 3.056.06 4.123c.05 1.064.217 1.79.465 2.427a4.902 4.902 0 0 0 1.153 1.772 4.902 4.902 0 0 0 1.772 1.153c.637.248 1.363.415 2.427.465C8.944 21.988 9.283 22 12 22s3.056-.012 4.123-.06c1.064-.05 1.79-.217 2.427-.465a4.902 4.902 0 0 0 1.772-1.153 4.902 4.902 0 0 0 1.153-1.772c.248-.637.415-1.363.465-2.427.048-1.067.06-1.406.06-4.123s-.012-3.056-.06-4.123c-.05-1.064-.217-1.79-.465-2.427a4.902 4.902 0 0 0-1.153-1.772A4.902 4.902 0 0 0 18.55 2.525c-.637-.248-1.363-.415-2.427-.465C15.056 2.012 14.717 2 12 2Zm0 1.802c2.67 0 2.987.01 4.042.059.976.045 1.505.207 1.858.344.467.182.8.399 1.15.748.35.35.566.683.748 1.15.137.353.3.882.344 1.858.048 1.055.058 1.372.058 4.042s-.01 2.987-.058 4.042c-.045.976-.207 1.505-.344 1.858a3.1 3.1 0 0 1-.748 1.15 3.1 3.1 0 0 1-1.15.748c-.353.137-.882.3-1.858.344-1.055.048-1.372.058-4.042.058s-2.987-.01-4.042-.058c-.976-.045-1.505-.207-1.858-.344a3.1 3.1 0 0 1-1.15-.748 3.1 3.1 0 0 1-.748-1.15c-.137-.353-.3-.882-.344-1.858-.048-1.055-.058-1.372-.058-4.042s.01-2.987.058-4.042c.045-.976.207-1.505.344-1.858.182-.467.399-.8.748-1.15a3.1 3.1 0 0 1 1.15-.748c.353-.137.882-.3 1.858-.344C9.013 3.812 9.33 3.802 12 3.802Zm0 3.064a5.134 5.134 0 1 0 0 10.268 5.134 5.134 0 0 0 0-10.268Zm0 8.468a3.334 3.334 0 1 1 0-6.668 3.334 3.334 0 0 1 0 6.668Zm6.538-8.671a1.2 1.2 0 1 1-2.4 0 1.2 1.2 0 0 1 2.4 0Z"/></svg>
+        </a>
+      </div>
     </div>
     <div>
       <p class="label label--bronze">Seções</p>
@@ -318,13 +483,218 @@
         <li><a href="#local">Localização</a></li>
       </ul>
     </div>
+    <div>
+      <p class="label label--bronze">Serviços</p>
+      <ul class="footer__list">
+        <li><a href="#servicos">Síndico Profissional</a></li>
+        <li><a href="#servicos">Gestão Financeira</a></li>
+        <li><a href="#servicos">Manutenção Predial</a></li>
+        <li><a href="#servicos">Gestão de Contratos</a></li>
+        <li><a href="#servicos">Facilities</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="label label--bronze">Contato</p>
+      <ul class="footer__list footer__list--icons">
+        <li><a href="https://share.google/YadlORS5SsAcujL6U" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="16" height="16" aria-hidden="true"><path d="M4 21V7l8-4 8 4v14"/><path d="M9 21v-6h6v6"/><path d="M9 10h.01M15 10h.01M9 14h.01M15 14h.01"/></svg> JW Gestão de Condomínios e Facilities</a></li>
+        <li><a href="https://www.google.com/maps/dir/?api=1&amp;destination=-22.99893180,-43.35366390" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="16" height="16" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg> Av. das Américas, 4200 — sala 305</a></li>
+        <li><a href="https://wa.me/5521970590248?text=Ol%C3%A1%2C%20vim%20atrav%C3%A9s%20do%20site%20e%20gostaria%20de%20solicitar%20uma%20proposta%20de%20gest%C3%A3o." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg> WhatsApp</a></li>
+        <li><a href="tel:+5521970590248"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="16" height="16" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92Z"/></svg> (21) 97059-0248</a></li>
+      </ul>
+    </div>
   </div>
   <div class="credits mono">
-    <span>© JW Gestão de Condomínios e Facilities 2026</span>
+    <div class="credits__left">
+      <span>© JW Gestão de Condomínios e Facilities 2026</span>
+      <span class="credits__legal">
+        <a href="#" id="ck-prefs-link" class="credits__cookie">
+          <span id="cookie-toggle" class="cookie-toggle">
+            <span class="cookie-toggle__check">✓</span>
+            <span class="cookie-toggle__x">✕</span>
+            <span id="cookie-toggle-dot" class="cookie-toggle__dot"></span>
+          </span>
+          Cookies
+        </a>
+        <a href="termos-e-condicoes.html">Termos e Condições</a>
+        <a href="politica-de-privacidade.html">Política de Privacidade</a>
+      </span>
+    </div>
     <span>Desenvolvido por <a href="https://www.ag5agencia.com.br" target="_blank" rel="noopener">AG5</a> Agência</span>
   </div>
 </footer>
 
+<div class="drawer-overlay" id="drawerOverlay"></div>
+<aside class="drawer" id="drawer" aria-hidden="true">
+  <div class="drawer__head">
+    <a class="nav__brand" href="#topo">JW <span>·</span> Gestão &amp; Facilities</a>
+    <button class="drawer__close" id="drawerClose" aria-label="Fechar menu">×</button>
+  </div>
+  <nav class="drawer__links">
+    <a href="#servicos">Serviços</a>
+    <a href="#sobre">Sobre</a>
+    <a href="#pratica">Na prática</a>
+    <a href="#faq">FAQ</a>
+    <a href="#contato">Contato</a>
+  </nav>
+  <a class="btn btn--solid drawer__cta" href="https://wa.me/5521970590248" target="_blank" rel="noopener">Falar com o síndico</a>
+</aside>
+
+<!-- ========== COOKIE BANNER — Padrão AG5 ========== -->
+<div id="ck-banner" class="ck-banner" role="dialog" aria-modal="true" aria-label="Aviso de cookies" aria-live="polite" aria-hidden="true">
+  <div class="ck-banner__inner">
+    <div class="ck-banner__content">
+      <h2 class="ck-banner__title">Valorizamos sua privacidade</h2>
+      <p class="ck-banner__text">
+        Utilizamos cookies para aprimorar sua experiência de navegação, exibir conteúdo
+        personalizado e analisar nosso tráfego. Ao clicar em <strong>"Aceitar todos"</strong>,
+        você concorda com nosso uso de cookies conforme nossa
+        <a href="politica-de-privacidade.html" class="ck-banner__link">Política de Privacidade</a>.
+      </p>
+    </div>
+    <div class="ck-banner__actions">
+      <button id="ck-customize" class="ck-btn ck-btn--ghost">Personalizar</button>
+      <button id="ck-reject" class="ck-btn ck-btn--outline">Rejeitar</button>
+      <button id="ck-accept-all" class="ck-btn ck-btn--primary">Aceitar todos</button>
+    </div>
+  </div>
+</div>
+
+<div id="ck-modal" class="ck-modal" role="dialog" aria-modal="true" aria-label="Personalizar preferências de cookies" aria-hidden="true">
+  <div class="ck-modal__overlay" id="ck-modal-overlay"></div>
+  <div class="ck-modal__box">
+    <div class="ck-modal__header">
+      <h2 class="ck-modal__title">Personalizar preferências de consentimento</h2>
+      <button class="ck-modal__close" id="ck-modal-close" aria-label="Fechar modal">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M18 6L6 18M6 6l12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+    </div>
+    <div class="ck-modal__body">
+      <p class="ck-modal__intro">
+        Utilizamos cookies para ajudar você a navegar com eficiência e executar certas funções.
+        Os cookies classificados como <strong>"Necessário"</strong> são essenciais para o
+        funcionamento básico do site e não podem ser desativados.
+      </p>
+      <div class="ck-category">
+        <div class="ck-category__header">
+          <div class="ck-category__info">
+            <h3 class="ck-category__name">Necessário</h3>
+            <p class="ck-category__desc">Essenciais para o funcionamento do site. Não armazenam dados pessoalmente identificáveis.</p>
+          </div>
+          <span class="ck-category__badge">Sempre ativo</span>
+        </div>
+      </div>
+      <div class="ck-category">
+        <div class="ck-category__header">
+          <div class="ck-category__info">
+            <h3 class="ck-category__name">Funcional</h3>
+            <p class="ck-category__desc">Ajudam a executar funcionalidades como compartilhamento em mídia social e recursos de terceiros.</p>
+          </div>
+          <label class="ck-toggle" aria-label="Ativar cookies funcionais">
+            <input type="checkbox" id="ck-functional" name="functional">
+            <span class="ck-toggle__slider"></span>
+          </label>
+        </div>
+      </div>
+      <div class="ck-category">
+        <div class="ck-category__header">
+          <div class="ck-category__info">
+            <h3 class="ck-category__name">Analítico</h3>
+            <p class="ck-category__desc">Usados para entender como os visitantes interagem com o site (visitantes, taxa de rejeição, etc.).</p>
+          </div>
+          <label class="ck-toggle" aria-label="Ativar cookies analíticos">
+            <input type="checkbox" id="ck-analytics" name="analytics">
+            <span class="ck-toggle__slider"></span>
+          </label>
+        </div>
+      </div>
+      <div class="ck-category">
+        <div class="ck-category__header">
+          <div class="ck-category__info">
+            <h3 class="ck-category__name">Desempenho</h3>
+            <p class="ck-category__desc">Analisam índices de desempenho do site para oferecer melhor experiência ao visitante.</p>
+          </div>
+          <label class="ck-toggle" aria-label="Ativar cookies de desempenho">
+            <input type="checkbox" id="ck-performance" name="performance">
+            <span class="ck-toggle__slider"></span>
+          </label>
+        </div>
+      </div>
+      <div class="ck-category">
+        <div class="ck-category__header">
+          <div class="ck-category__info">
+            <h3 class="ck-category__name">Publicidade</h3>
+            <p class="ck-category__desc">Entregam anúncios personalizados com base nas páginas visitadas anteriormente.</p>
+          </div>
+          <label class="ck-toggle" aria-label="Ativar cookies de publicidade">
+            <input type="checkbox" id="ck-advertising" name="advertising">
+            <span class="ck-toggle__slider"></span>
+          </label>
+        </div>
+      </div>
+    </div>
+    <div class="ck-modal__footer">
+      <button id="ck-modal-reject" class="ck-btn ck-btn--outline">Rejeitar</button>
+      <button id="ck-modal-save" class="ck-btn ck-btn--ghost">Salvar Preferências</button>
+      <button id="ck-modal-accept-all" class="ck-btn ck-btn--primary">Aceitar todos</button>
+    </div>
+  </div>
+</div>
+
+<button id="ck-prefs-btn" class="ck-prefs-btn" aria-label="Preferências de cookies" style="display:none;">Cookies</button>
+
+<!-- FAQ — modal de resposta -->
+<div id="faqModal" class="faq-modal" role="dialog" aria-modal="true" aria-labelledby="faqModalQuestion" aria-hidden="true">
+  <div class="faq-modal__overlay" id="faqModalOverlay"></div>
+  <div class="faq-modal__box">
+    <button class="faq-modal__close" id="faqModalClose" aria-label="Fechar">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" width="18" height="18" aria-hidden="true"><path d="M18 6L6 18M6 6l12 12"/></svg>
+    </button>
+    <p class="faq-modal__label label label--bronze">Pergunta frequente</p>
+    <h3 class="faq-modal__question" id="faqModalQuestion"></h3>
+    <p class="faq-modal__answer" id="faqModalAnswer"></p>
+    <a class="btn btn--ghost faq-modal__cta" href="https://wa.me/5521970590248?text=Ol%C3%A1%2C%20vim%20atrav%C3%A9s%20do%20site%20e%20gostaria%20de%20tirar%20uma%20d%C3%BAvida%20com%20a%20equipe." target="_blank" rel="noopener">Ainda com dúvida? Falar com a equipe</a>
+  </div>
+</div>
+
+<!-- WhatsApp Premium Experience -->
+<div class="wa-premium-container">
+  <!-- Balão de Mensagem Glassmorphism -->
+  <div id="wa-message-bubble" class="wa-bubble">
+    <button class="wa-close" id="wa-close-btn" aria-label="Fechar balão de mensagem">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" width="14" height="14" aria-hidden="true"><path d="M18 6L6 18M6 6l12 12"/></svg>
+    </button>
+    <div class="wa-content">
+      <div class="wa-header">
+        <div class="wa-avatar-wrapper">
+          <img src="assets/jw-gestao-condominios-john-wayne-foto-perfil.webp" alt="John Wayne" class="wa-avatar" width="48" height="48">
+        </div>
+        <div class="wa-info">
+          <span class="wa-name">John Wayne</span>
+        </div>
+      </div>
+      <div id="wa-typing" class="wa-typing">
+        <span></span><span></span><span></span>
+      </div>
+      <div id="wa-real-message" class="wa-message-text" style="display:none;">
+        <p>Olá! Estamos à disposição para falar sobre a gestão do seu condomínio. <strong>O primeiro diagnóstico é gratuito.</strong></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Botão Flutuante Redondo (SVG oficial WhatsApp com cauda — NÃO trocar) -->
+  <a href="https://wa.me/5521970590248?text=Ol%C3%A1%2C%20vim%20atrav%C3%A9s%20do%20site%20e%20gostaria%20de%20agendar%20uma%20conversa%20sobre%20a%20gest%C3%A3o%20do%20meu%20condom%C3%ADnio."
+     class="wa-float-btn" target="_blank" rel="noopener noreferrer"
+     id="wa-main-btn" aria-label="Fale conosco pelo WhatsApp">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" width="30" height="30">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+    </svg>
+    <span class="wa-badge" id="wa-notification" aria-hidden="true">1</span>
+  </a>
+</div>
+
 <script src="script.js"></script>
+<script src="cookie-banner.js" defer></script>
 </body>
 </html>
