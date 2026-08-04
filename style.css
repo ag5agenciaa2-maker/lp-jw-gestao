@@ -29,6 +29,7 @@ body{
   -webkit-font-smoothing:antialiased;overflow-x:hidden;text-wrap:pretty;
 }
 img,video,iframe{max-width:100%;display:block}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
 a{color:var(--bronze);text-decoration:none;transition:color .28s ease}
 a:hover{color:var(--bronze-claro)}
 h1,h2,h3,p,figure,blockquote{margin:0}
