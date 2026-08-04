@@ -23,6 +23,22 @@
       portraitMute.setAttribute('aria-label', isMuted ? 'Ativar som' : 'Silenciar');
     });
   }
+  /* --- hero: pausa e reinicia o vídeo quando sai/entra na tela --- */
+  const heroSection = $('#topo');
+  if (heroSection && portraitVideo) {
+    const heroObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          portraitVideo.play();
+        } else {
+          portraitVideo.pause();
+          portraitVideo.currentTime = 0;
+        }
+      });
+    }, { threshold: 0 });
+    heroObserver.observe(heroSection);
+  }
+
   /* --- hero: modal ultra premium do vídeo --- */
   const videoModal = $('#videoModal');
   const videoModalVideo = $('#videoModalVideo');
