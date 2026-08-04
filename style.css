@@ -122,7 +122,14 @@ ul,ol{margin:0;padding:0;list-style:none}
 .drawer__cta{margin-top:auto;text-align:center}
 
 /* ---------- hero (HERO-C) ---------- */
-.hero{min-height:100vh;display:flex;align-items:center;padding:96px var(--pad-x) 48px;position:relative;overflow:hidden}
+.hero{
+  min-height:100vh;display:flex;align-items:center;padding:96px var(--pad-x) 48px;position:relative;overflow:hidden;
+  background:
+    linear-gradient(90deg,var(--grafite-profundo) 0%,rgba(16,18,21,.94) 35%,rgba(16,18,21,.82) 60%,rgba(16,18,21,.7) 100%),
+    linear-gradient(0deg,var(--grafite-profundo) 0%,rgba(16,18,21,.55) 18%,rgba(16,18,21,.4) 55%,rgba(16,18,21,.72) 100%),
+    url("assets/hero-portrait-mobile.png");
+  background-size:cover;background-position:center 30%;background-repeat:no-repeat;
+}
 .hero__glow{
   position:absolute;inset:0;pointer-events:none;z-index:0;
   background:
