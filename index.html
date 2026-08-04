@@ -19,10 +19,9 @@
 <header class="nav" id="nav">
   <a class="nav__brand" href="#topo">JW <span>·</span> Gestão &amp; Facilities</a>
   <nav class="nav__links" id="navLinks">
+    <a href="#topo">Início</a>
     <a href="#servicos">Serviços</a>
-    <a href="#sobre">Sobre</a>
-    <a href="#pratica">Na prática</a>
-    <a href="#faq">FAQ</a>
+    <a href="#sobre">Trajetória</a>
     <a href="#contato">Contato</a>
     <a class="btn btn--solid" href="https://wa.me/5521970590248?text=Ol%C3%A1%2C%20vim%20atrav%C3%A9s%20do%20site%20e%20gostaria%20de%20falar%20com%20o%20s%C3%ADndico%20sobre%20a%20gest%C3%A3o%20do%20meu%20condom%C3%ADnio." target="_blank" rel="noopener">Falar com o síndico</a>
   </nav>
@@ -33,8 +32,9 @@
 
 <main>
 
-<!-- HERO — editorial tipográfico (HERO-C) -->
+<!-- HERO — editorial tipográfico ultra premium (HERO-D) -->
 <section class="hero" id="topo">
+  <div class="hero__glow" aria-hidden="true"></div>
   <div class="hero__grid">
     <div class="hero__text">
       <p class="label hero__label">Síndico profissional · Facilities · Barra da Tijuca</p>
@@ -49,27 +49,33 @@
         <a class="btn btn--ghost" href="#servicos">Escopo de gestão</a>
       </div>
       <div class="hero__data">
-        <span>Desde 2023</span><i></i>
-        <span>Av. das Américas, 4200</span><i></i>
-        <span>Seg–Sex 9h–18h</span><i></i>
-        <span>(21) 97059-0248</span>
+        <span class="hero__data-item"><strong>Desde 2023</strong></span>
+        <span class="hero__data-item">Av. das Américas, 4200</span>
+        <span class="hero__data-item">Seg–Sex 9h–18h</span>
+        <span class="hero__data-item">(21) 97059-0248</span>
       </div>
     </div>
     <figure class="portrait">
       <span class="portrait__frame"></span>
-      <img src="assets/jw-gestao-condominios-john-wayne-foto-perfil.webp" alt="John Wayne, síndico profissional e fundador da JW Gestão de Condomínios e Facilities, retrato de perfil" loading="lazy" width="240" height="320">
+      <span class="portrait__glow" aria-hidden="true"></span>
+      <div class="portrait__media">
+        <video class="portrait__video" autoplay loop muted playsinline width="320" height="480">
+          <source src="assets/jw-gestao-condominios-valores-sindico-reel.mp4" type="video/mp4">
+        </video>
+        <div class="portrait__controls">
+          <button class="portrait__btn" id="portraitMute" aria-label="Ativar som" aria-pressed="false">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="16" height="16" aria-hidden="true"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><line x1="23" y1="9" x2="17" y2="15"/><line x1="17" y1="9" x2="23" y2="15"/></svg>
+          </button>
+          <button class="portrait__btn" id="portraitExpand" aria-label="Expandir vídeo">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="16" height="16" aria-hidden="true"><path d="M8 3H5a2 2 0 0 0-2 2v3"/><path d="M21 8V5a2 2 0 0 0-2-2h-3"/><path d="M3 16v3a2 2 0 0 0 2 2h3"/><path d="M16 21h3a2 2 0 0 0 2-2v-3"/></svg>
+          </button>
+        </div>
+      </div>
       <figcaption>John Wayne<br><span>Fundador · Síndico profissional</span></figcaption>
     </figure>
   </div>
 </section>
 
-<!-- MARQUEE -->
-<div class="marquee" id="marquee">
-  <div class="marquee__track">
-    <span>Síndico profissional <b>·</b> Gestão operacional <b>·</b> Facilities <b>·</b> Manutenção predial <b>·</b> Gestão de obras <b>·</b> Barra da Tijuca <b>·</b> Rio de Janeiro <b>·</b></span>
-    <span aria-hidden="true">Síndico profissional <b>·</b> Gestão operacional <b>·</b> Facilities <b>·</b> Manutenção predial <b>·</b> Gestão de obras <b>·</b> Barra da Tijuca <b>·</b> Rio de Janeiro <b>·</b></span>
-  </div>
-</div>
 
 <!-- DOR E SOLUÇÃO — narrativa vertical em 3 atos -->
 <section class="section section--diagnostico" id="diagnostico">
@@ -102,7 +108,7 @@
       <span class="pain__num mono">C.</span>
       <div class="pain__content">
         <h3>Conflito e desgaste</h3>
-        <p>Sem processo de atendimento e mediação, a convivência se resolve na reclamação — e chega ao conselho já escalada.</p>
+        <p>Sem processo de atendimento e mediação, a convivência se resolve na reclamação e chega ao conselho já escalada.</p>
       </div>
     </article>
     <article class="pain reveal">
@@ -132,7 +138,7 @@
   </div>
 </section>
 
-<!-- SERVIÇOS — bento ultra premium (SERV-A) -->
+<!-- SERVIÇOS / ESCOPO — simples e ultra premium -->
 <section class="section section--servicos" id="servicos">
   <div class="servicos__glow" aria-hidden="true"></div>
   <div class="servicos__head">
@@ -143,41 +149,83 @@
     <p class="servicos__lead mono muted reveal">09 frentes principais · 24 serviços no escopo completo</p>
   </div>
 
-  <div class="bento">
-    <article class="card card--xl reveal card--featured">
-      <span class="card__num">01.</span>
-      <div><h3 class="card__title card__title--serif">Síndico Profissional</h3><p>Representação legal e condução da operação diária com rotina documentada, agenda de assembleias e canal direto com o conselho.</p></div>
+  <div class="escopo__grid" role="list" aria-label="Frentes de gestão">
+    <article class="escopo__card reveal" role="listitem">
+      <span class="escopo__card-num mono" aria-hidden="true">01</span>
+      <h3 class="escopo__card-title">Síndico Profissional</h3>
+      <p class="escopo__card-text">Representação legal e condução da operação diária com rotina documentada, agenda de assembleias e canal direto com o conselho.</p>
     </article>
-    <article class="card card--wide reveal">
-      <span class="card__num">02.</span>
-      <div><h3 class="card__title">Gestão Financeira</h3><p>Orçamento, fluxo de caixa e prestação de contas com série histórica.</p></div>
+    <article class="escopo__card reveal" role="listitem">
+      <span class="escopo__card-num mono" aria-hidden="true">02</span>
+      <h3 class="escopo__card-title">Gestão Financeira</h3>
+      <p class="escopo__card-text">Orçamento, fluxo de caixa e prestação de contas com série histórica.</p>
     </article>
-    <article class="card card--sm reveal"><span class="card__num">03.</span><h3 class="card__title">Gestão Administrativa</h3></article>
-    <article class="card card--sm reveal"><span class="card__num">04.</span><h3 class="card__title">Gestão Operacional</h3></article>
-    <article class="card card--lg reveal card--featured">
-      <span class="card__num">05.</span>
-      <div><h3 class="card__title card__title--serif">Manutenção Predial</h3><p>Plano preventivo por sistema, cronograma anual e registro de cada intervenção — a frente que mais reduz custo futuro.</p></div>
+    <article class="escopo__card reveal" role="listitem">
+      <span class="escopo__card-num mono" aria-hidden="true">03</span>
+      <h3 class="escopo__card-title">Gestão Administrativa</h3>
+      <p class="escopo__card-text">Documentação, protocolos, atas e fluxos internos padronizados.</p>
     </article>
-    <article class="card card--md reveal">
-      <span class="card__num">06.</span>
-      <div><h3 class="card__title">Gestão de Contratos</h3><p>Vigências, reajustes e escopo cobrado conforme contratado.</p></div>
+    <article class="escopo__card reveal" role="listitem">
+      <span class="escopo__card-num mono" aria-hidden="true">04</span>
+      <h3 class="escopo__card-title">Gestão Operacional</h3>
+      <p class="escopo__card-text">Rotina de limpeza, portaria, conservação e acompanhamento de equipes.</p>
     </article>
-    <article class="card card--md reveal">
-      <span class="card__num">07.</span>
-      <div><h3 class="card__title">Gestão de Fornecedores</h3><p>Avaliação contínua, comparativo e substituição por desempenho.</p></div>
+    <article class="escopo__card reveal" role="listitem">
+      <span class="escopo__card-num mono" aria-hidden="true">05</span>
+      <h3 class="escopo__card-title">Manutenção Predial</h3>
+      <p class="escopo__card-text">Plano preventivo por sistema, cronograma anual e registro de cada intervenção.</p>
     </article>
-    <article class="card card--md reveal"><span class="card__num">08.</span><h3 class="card__title">Gestão de Obras</h3></article>
-    <article class="card card--md reveal"><span class="card__num">09.</span><h3 class="card__title">Facilities</h3></article>
+    <article class="escopo__card reveal" role="listitem">
+      <span class="escopo__card-num mono" aria-hidden="true">06</span>
+      <h3 class="escopo__card-title">Gestão de Contratos</h3>
+      <p class="escopo__card-text">Vigências, reajustes e escopo cobrado conforme contratado.</p>
+    </article>
+    <article class="escopo__card reveal" role="listitem">
+      <span class="escopo__card-num mono" aria-hidden="true">07</span>
+      <h3 class="escopo__card-title">Gestão de Fornecedores</h3>
+      <p class="escopo__card-text">Avaliação contínua, comparativo e substituição por desempenho.</p>
+    </article>
+    <article class="escopo__card reveal" role="listitem">
+      <span class="escopo__card-num mono" aria-hidden="true">08</span>
+      <h3 class="escopo__card-title">Gestão de Obras</h3>
+      <p class="escopo__card-text">Fiscalização de reformas, cronogramas, custos e controle de qualidade.</p>
+    </article>
+    <article class="escopo__card reveal" role="listitem">
+      <span class="escopo__card-num mono" aria-hidden="true">09</span>
+      <h3 class="escopo__card-title">Facilities</h3>
+      <p class="escopo__card-text">Ambiente, conforto, sustentabilidade e manutenção dos espaços comuns.</p>
+    </article>
   </div>
 
   <div class="scope-card reveal">
-    <span class="scope-card__line" aria-hidden="true"></span>
     <p class="scope-card__label mono">Escopo completo</p>
-    <p class="scope-card__text">Planejamento Orçamentário · Redução de Custos · Compliance Condominial · Gestão de Pessoas · Mediação de Conflitos · Atendimento ao Morador · Organização de Assembleias · Indicadores (KPIs) · Auditoria Operacional · Implantação de Processos · Gestão de Riscos · Consultoria · Comunicação Institucional · Acompanhamento Jurídico · Gestão de Seguros</p>
+    <div class="scope-card__columns">
+      <div class="scope-card__column">
+        <span>Planejamento Orçamentário</span>
+        <span>Redução de Custos</span>
+        <span>Compliance Condominial</span>
+        <span>Gestão de Pessoas</span>
+        <span>Mediação de Conflitos</span>
+      </div>
+      <div class="scope-card__column">
+        <span>Atendimento ao Morador</span>
+        <span>Organização de Assembleias</span>
+        <span>Indicadores (KPIs)</span>
+        <span>Auditoria Operacional</span>
+        <span>Implantação de Processos</span>
+      </div>
+      <div class="scope-card__column">
+        <span>Gestão de Riscos</span>
+        <span>Consultoria</span>
+        <span>Comunicação Institucional</span>
+        <span>Acompanhamento Jurídico</span>
+        <span>Gestão de Seguros</span>
+      </div>
+    </div>
   </div>
 </section>
 
-<!-- OPERAÇÃO — ultra premium v3: accordion horizontal -->
+<!-- OPERAÇÃO — ultra premium v4: cards de grid com spotlight sutil -->
 <section class="section section--operacao" id="operacao">
   <div class="operacao__glow" aria-hidden="true"></div>
 
@@ -187,56 +235,52 @@
     <p class="operacao__subtitle mono">Cada frente tem responsável, rotina documentada e indicador. O que não é medido não entra no contrato.</p>
   </div>
 
-  <div class="operacao__accordion" role="tablist" aria-label="Frentes de operação">
-    <article class="operacao__panel operacao__panel--1 reveal" tabindex="0" role="tab" aria-expanded="false">
-      <span class="operacao__panel-bg" aria-hidden="true"></span>
-      <span class="operacao__panel-glow" aria-hidden="true"></span>
-      <span class="operacao__panel-num mono" aria-hidden="true">01</span>
-      <div class="operacao__panel-content">
-        <h3 class="operacao__panel-title">Conservação auditada</h3>
-        <p class="operacao__panel-text">Padrão de limpeza, jardinagem e manutenção de áreas comuns verificado por checklist, não por impressão.</p>
+  <div class="operacao__grid" role="list" aria-label="Frentes de operação">
+    <article class="operacao__card reveal" tabindex="0" role="listitem">
+      <span class="operacao__card-glow" aria-hidden="true"></span>
+      <span class="operacao__card-num mono" aria-hidden="true">01</span>
+      <div class="operacao__card-content">
+        <h3 class="operacao__card-title">Conservação auditada</h3>
+        <p class="operacao__card-text">Padrão de limpeza, jardinagem e manutenção de áreas comuns verificado por checklist, não por impressão.</p>
       </div>
-      <figure class="operacao__panel-media">
-        <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&amp;fit=crop&amp;w=1400&amp;q=80" alt="Área comum de condomínio residencial de alto padrão" loading="lazy">
+      <figure class="operacao__card-media">
+        <img src="Assets/operacao-conservacao-auditada.png" alt="Conservação auditada de áreas comuns em condomínio de alto padrão" loading="lazy">
       </figure>
     </article>
 
-    <article class="operacao__panel operacao__panel--2 reveal" tabindex="0" role="tab" aria-expanded="false">
-      <span class="operacao__panel-bg" aria-hidden="true"></span>
-      <span class="operacao__panel-glow" aria-hidden="true"></span>
-      <span class="operacao__panel-num mono" aria-hidden="true">02</span>
-      <div class="operacao__panel-content">
-        <h3 class="operacao__panel-title">Assembleias e conselho</h3>
-        <p class="operacao__panel-text">Pauta, documentação e ata rastreáveis. O conselho decide informado.</p>
+    <article class="operacao__card reveal" tabindex="0" role="listitem">
+      <span class="operacao__card-glow" aria-hidden="true"></span>
+      <span class="operacao__card-num mono" aria-hidden="true">02</span>
+      <div class="operacao__card-content">
+        <h3 class="operacao__card-title">Assembleias e conselho</h3>
+        <p class="operacao__card-text">Pauta, documentação e ata rastreáveis. O conselho decide informado.</p>
       </div>
-      <figure class="operacao__panel-media">
-        <img src="https://images.unsplash.com/photo-1517502884422-41eaead166d4?auto=format&amp;fit=crop&amp;w=1200&amp;q=80" alt="Sala de reunião preparada para conselho condominial" loading="lazy">
+      <figure class="operacao__card-media">
+        <img src="Assets/operacao-assembleias-conselho.png" alt="Sala de reunião executiva para conselho condominial" loading="lazy">
       </figure>
     </article>
 
-    <article class="operacao__panel operacao__panel--3 reveal" tabindex="0" role="tab" aria-expanded="false">
-      <span class="operacao__panel-bg" aria-hidden="true"></span>
-      <span class="operacao__panel-glow" aria-hidden="true"></span>
-      <span class="operacao__panel-num mono" aria-hidden="true">03</span>
-      <div class="operacao__panel-content">
-        <h3 class="operacao__panel-title">Manutenção preventiva</h3>
-        <p class="operacao__panel-text">Cronograma por sistema. Intervenções registradas, custos antecipados.</p>
+    <article class="operacao__card reveal" tabindex="0" role="listitem">
+      <span class="operacao__card-glow" aria-hidden="true"></span>
+      <span class="operacao__card-num mono" aria-hidden="true">03</span>
+      <div class="operacao__card-content">
+        <h3 class="operacao__card-title">Manutenção preventiva</h3>
+        <p class="operacao__card-text">Cronograma por sistema. Intervenções registradas, custos antecipados.</p>
       </div>
-      <figure class="operacao__panel-media">
-        <img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&amp;fit=crop&amp;w=1200&amp;q=80" alt="Manutenção preventiva de sistemas prediais" loading="lazy">
+      <figure class="operacao__card-media">
+        <img src="Assets/operacao-manutencao-preventiva.png" alt="Manutenção preventiva de elevadores e sistemas prediais no hall de condomínio residencial de luxo" loading="lazy">
       </figure>
     </article>
 
-    <article class="operacao__panel operacao__panel--4 reveal" tabindex="0" role="tab" aria-expanded="false">
-      <span class="operacao__panel-bg" aria-hidden="true"></span>
-      <span class="operacao__panel-glow" aria-hidden="true"></span>
-      <span class="operacao__panel-num mono" aria-hidden="true">04</span>
-      <div class="operacao__panel-content">
-        <h3 class="operacao__panel-title">Portaria e acesso</h3>
-        <p class="operacao__panel-text">Procedimento escrito, comunicação padronizada e controle de prestadores.</p>
+    <article class="operacao__card reveal" tabindex="0" role="listitem">
+      <span class="operacao__card-glow" aria-hidden="true"></span>
+      <span class="operacao__card-num mono" aria-hidden="true">04</span>
+      <div class="operacao__card-content">
+        <h3 class="operacao__card-title">Portaria e acesso</h3>
+        <p class="operacao__card-text">Procedimento escrito, comunicação padronizada e controle de prestadores.</p>
       </div>
-      <figure class="operacao__panel-media">
-        <img src="https://images.unsplash.com/photo-1524230572899-a752b3835840?auto=format&amp;fit=crop&amp;w=1200&amp;q=80" alt="Portaria e controle de acesso" loading="lazy">
+      <figure class="operacao__card-media">
+        <img src="Assets/operacao-portaria-acesso.png" alt="Portaria e controle de acesso sofisticado em condomínio" loading="lazy">
       </figure>
     </article>
   </div>
@@ -260,84 +304,132 @@
   </div>
 </section>
 
-<!-- SOBRE — split 50/50 com vídeo fixado (SOBRE-D) -->
-<section class="section section--rule" id="sobre">
-  <p class="label label--bronze">04 — Trajetória</p>
-  <div class="split split--about">
-    <div class="about__media">
+<!-- TRAJETÓRIA — simples, organizada e premium -->
+<section class="section section--sobre" id="sobre">
+  <div class="sobre__head">
+    <p class="label label--bronze">04 — Trajetória</p>
+    <h2 class="display reveal">De quem conduz a gestão</h2>
+    <p class="sobre__lead mono muted reveal">John Wayne traz para a gestão condominial a disciplina de grandes instituições financeiras.</p>
+  </div>
+
+  <div class="sobre__grid">
+    <div class="sobre__video reveal">
       <div class="videoframe">
-        <video controls preload="none" playsinline poster="assets/jw-gestao-condominios-john-wayne-foto-perfil.webp">
+        <video controls preload="metadata" playsinline>
           <source src="assets/jw-gestao-condominios-trajetoria-fundador-video.mp4" type="video/mp4">
         </video>
       </div>
-      <p class="mono muted about__caption">Vídeo · trajetória do fundador</p>
+      <p class="mono muted sobre__caption">Vídeo · trajetória do fundador</p>
     </div>
-    <div class="about__text">
-      <div class="block block--first reveal"><p class="label label--bronze">Origem</p><p class="lead">John Wayne construiu carreira em grandes instituições financeiras antes de direcionar sua trajetória para a gestão condominial. A disciplina de controle veio de lá — o problema a resolver estava aqui.</p></div>
-      <div class="block reveal"><p class="label label--bronze">Método</p><p>Ao identificar desafios recorrentes de administração, manutenção, gestão de equipes e controle de fornecedores, criou uma empresa capaz de aproximar a administração condominial das melhores práticas de governança do ambiente corporativo.</p></div>
-      <div class="block reveal"><p class="label label--bronze">Atuação</p><p>Desde a fundação, em abril de 2023, atua na administração de condomínios residenciais de grande porte, com processos próprios, manuais operacionais, indicadores de desempenho, sistemas de avaliação de fornecedores e metodologias de acompanhamento de manutenção, atendimento, compras, segurança e operação diária.</p></div>
-      <div class="block block--last reveal"><p class="label label--bronze">Compromisso</p><p>Eficiência, transparência e valorização do patrimônio. Atendimento próximo, ágil e orientado à solução — com prestação de contas que resiste a auditoria.</p></div>
-      <ul class="diffs mono reveal">
-        <li>— Gestão baseada em indicadores de desempenho (KPIs)</li>
-        <li>— Processos operacionais padronizados e documentados</li>
-        <li>— Avaliação contínua de fornecedores e prestadores</li>
-        <li>— Forte atuação em manutenção preventiva</li>
-        <li>— Gestão integrada de facilities</li>
-      </ul>
+
+    <div class="sobre__cards">
+      <article class="sobre__card reveal">
+        <span class="sobre__card-num mono">01</span>
+        <h3 class="sobre__card-title">Origem</h3>
+        <p>Carreira construída em grandes instituições financeiras. A disciplina de controle veio de lá.</p>
+      </article>
+      <article class="sobre__card reveal">
+        <span class="sobre__card-num mono">02</span>
+        <h3 class="sobre__card-title">Método</h3>
+        <p>Gestão condominial aproximada das práticas de governança corporativa.</p>
+      </article>
+      <article class="sobre__card reveal">
+        <span class="sobre__card-num mono">03</span>
+        <h3 class="sobre__card-title">Atuação</h3>
+        <p>Desde abril de 2023 administrando condomínios de grande porte na Barra da Tijuca, entre eles Concept, Latitud e Orygem.</p>
+      </article>
+      <article class="sobre__card reveal">
+        <span class="sobre__card-num mono">04</span>
+        <h3 class="sobre__card-title">Compromisso</h3>
+        <p>Eficiência, transparência e valorização do patrimônio com prestação de contas clara.</p>
+      </article>
     </div>
   </div>
 </section>
 
-<!-- GESTÃO NA PRÁTICA — parede de vídeos 9:16 -->
-<section class="section section--rule section--flush" id="pratica">
-  <div class="section__head section__head--pad">
-    <div>
-      <p class="label label--bronze">05 — Gestão na prática</p>
-      <h2 class="display">Posições públicas sobre o dia a dia da gestão</h2>
+<!-- GESTÃO NA PRÁTICA / PODCAST — carrossel editorial (coverflow sutil) -->
+<section class="section section--pratica" id="pratica">
+  <div class="pratica__glow" aria-hidden="true"></div>
+  <div class="pratica__glow pratica__glow--b" aria-hidden="true"></div>
+
+  <div class="pratica__layout">
+    <div class="pratica__panel reveal">
+      <p class="label label--bronze">05 — Podcast</p>
+      <h2 class="display">Gestão na prática <em>em vídeo</em></h2>
+      <p class="pratica__lead">Conversas que traduzem dilemas reais do condomínio em decisão clara.</p>
+
+      <div class="pratica__now">
+        <span class="pratica__now-index mono"><span class="pratica__counter-current">01</span> / <span class="pratica__counter-total">05</span></span>
+        <span class="pratica__now-tag" data-now="tag">Entrevista</span>
+        <h3 class="pratica__now-title" data-now="title">Reconhecimento e confiança na gestão condominial</h3>
+      </div>
+
+      <div class="pratica__controls">
+        <a class="btn btn--ghost" href="https://www.instagram.com/chamaojohn/" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="16" height="16" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          Acompanhar
+        </a>
+      </div>
     </div>
-    <p class="mono muted">Arraste para o lado →</p>
-  </div>
-  <div class="reels">
-    <article class="reel reveal">
-      <div class="reel__box"><video controls preload="none" playsinline muted><source src="assets/jw-gestao-condominios-acesso-fornecedores-reel.mp4" type="video/mp4"></video></div>
-      <h3>Uber pode entrar no condomínio?</h3>
-      <a class="mono" href="https://www.instagram.com/reel/DZpbK4-hi_Q/" target="_blank" rel="noopener">Ver no Instagram ↗</a>
-    </article>
-    <article class="reel reveal">
-      <div class="reel__box"><video controls preload="none" playsinline muted><source src="assets/jw-gestao-condominios-orientacao-juridica-reel.mp4" type="video/mp4"></video></div>
-      <h3>Problemas condominiais evitáveis com orientação jurídica preventiva</h3>
-      <a class="mono" href="https://www.instagram.com/reel/DZmyh0MREW-/" target="_blank" rel="noopener">Ver no Instagram ↗</a>
-    </article>
-    <article class="reel reveal">
-      <div class="reel__box"><video controls preload="none" playsinline muted><source src="assets/jw-gestao-condominios-trajetoria-primeiro-passo-reel.mp4" type="video/mp4"></video></div>
-      <h3>Toda grande trajetória começa com um primeiro passo</h3>
-      <a class="mono" href="https://www.instagram.com/reel/DZKcZHnhtNr/" target="_blank" rel="noopener">Ver no Instagram ↗</a>
-    </article>
-    <article class="reel reveal">
-      <div class="reel__box"><video controls preload="none" playsinline muted><source src="assets/jw-gestao-condominios-valores-sindico-reel.mp4" type="video/mp4"></video></div>
-      <h3>Gestão condominial começa pelos valores de quem a conduz</h3>
-      <a class="mono" href="https://www.instagram.com/reel/DZH8pBQRZqi/" target="_blank" rel="noopener">Ver no Instagram ↗</a>
-    </article>
-    <article class="reel reveal">
-      <div class="reel__box"><video controls preload="none" playsinline muted><source src="assets/jw-gestao-condominios-manutencao-preventiva-reel.mp4" type="video/mp4"></video></div>
-      <h3>Manutenção preventiva do condomínio</h3>
-      <a class="mono" href="https://www.instagram.com/reel/DZFcOzdxiaZ/" target="_blank" rel="noopener">Ver no Instagram ↗</a>
-    </article>
-    <!-- BÔNUS: 6º vídeo (formato entrevista/podcast) sem título/link do Instagram declarado no dossiê -->
-    <article class="reel reveal">
-      <div class="reel__box"><video controls preload="none" playsinline muted><source src="assets/jw-gestao-condominios-podcast-entrevista-reel.mp4" type="video/mp4"></video></div>
-      <h3>Reconhecimento e confiança na gestão condominial</h3>
-    </article>
+
+    <div class="pratica__viewport">
+      <div class="reels reels--pratica" id="reelsPratica">
+        <article class="reel" data-tag="Entrevista" data-title="Reconhecimento e confiança na gestão condominial" data-link="https://www.instagram.com/chamaojohn/">
+          <div class="reel__box">
+            <div class="reel__frame">
+              <video preload="none" playsinline muted poster="assets/jw-gestao-condominios-podcast-entrevista-poster.jpg"><source src="assets/jw-gestao-condominios-podcast-entrevista-reel.mp4" type="video/mp4"></video>
+              <span class="reel__play" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M8 5v14l11-7z"/></svg></span>
+            </div>
+          </div>
+        </article>
+        <article class="reel" data-tag="Convivência" data-title="Uber pode entrar no condomínio?" data-link="https://www.instagram.com/reel/DZpbK4-hi_Q/">
+          <div class="reel__box">
+            <div class="reel__frame">
+              <video preload="none" playsinline muted poster="assets/jw-gestao-condominios-acesso-fornecedores-reel-poster.jpg"><source src="assets/jw-gestao-condominios-acesso-fornecedores-reel.mp4" type="video/mp4"></video>
+              <span class="reel__play" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M8 5v14l11-7z"/></svg></span>
+            </div>
+          </div>
+        </article>
+        <article class="reel" data-tag="Jurídico" data-title="Problemas evitáveis com orientação jurídica" data-link="https://www.instagram.com/reel/DZmyh0MREW-/">
+          <div class="reel__box">
+            <div class="reel__frame">
+              <video preload="none" playsinline muted poster="assets/jw-gestao-condominios-orientacao-juridica-reel-poster.jpg"><source src="assets/jw-gestao-condominios-orientacao-juridica-reel.mp4" type="video/mp4"></video>
+              <span class="reel__play" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M8 5v14l11-7z"/></svg></span>
+            </div>
+          </div>
+        </article>
+        <article class="reel" data-tag="Trajetória" data-title="Toda trajetória começa com um primeiro passo" data-link="https://www.instagram.com/reel/DZKcZHnhtNr/">
+          <div class="reel__box">
+            <div class="reel__frame">
+              <video preload="none" playsinline muted poster="assets/jw-gestao-condominios-trajetoria-primeiro-passo-reel-poster.jpg"><source src="assets/jw-gestao-condominios-trajetoria-primeiro-passo-reel.mp4" type="video/mp4"></video>
+              <span class="reel__play" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M8 5v14l11-7z"/></svg></span>
+            </div>
+          </div>
+        </article>
+        <article class="reel" data-tag="Operação" data-title="Manutenção preventiva do condomínio" data-link="https://www.instagram.com/reel/DZFcOzdxiaZ/">
+          <div class="reel__box">
+            <div class="reel__frame">
+              <video preload="none" playsinline muted poster="assets/jw-gestao-condominios-manutencao-preventiva-reel-poster.jpg"><source src="assets/jw-gestao-condominios-manutencao-preventiva-reel.mp4" type="video/mp4"></video>
+              <span class="reel__play" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M8 5v14l11-7z"/></svg></span>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
   </div>
 </section>
 
-<!-- DEPOIMENTOS — frase editorial (DEPO-B) -->
+<!-- DEPOIMENTOS — frase editorial split com retrato (DEPO-B) -->
 <!-- BLOCO PENDENTE: substituir por avaliação real do Google quando disponível. Não renderizar estrelas, nota média nem logo do Google até haver dado real. -->
 <section class="statement" id="declaracao">
-  <span class="statement__quote statement__quote--a" aria-hidden="true">“</span>
-  <span class="statement__quote statement__quote--b" aria-hidden="true">”</span>
-  <blockquote class="reveal">Prestar contas não é obrigação de fim de ano. É o método de trabalho.</blockquote>
-  <p class="mono statement__sign reveal">John Wayne · Fundador, JW Gestão de Condomínios e Facilities</p>
+  <div class="statement__portrait reveal">
+    <img src="assets/jw-gestao-condominios-john-wayne-foto-perfil.webp" alt="John Wayne, fundador da JW Gestão de Condomínios e Facilities" loading="lazy">
+  </div>
+  <div class="statement__content">
+    <span class="statement__quote" aria-hidden="true">“</span>
+    <blockquote class="reveal">Administrar vai além da rotina: <em>controlar custos, planejar investimentos e liderar equipes.</em></blockquote>
+    <p class="mono statement__sign reveal">John Wayne · Fundador, JW Gestão de Condomínios e Facilities</p>
+  </div>
 </section>
 
 <!-- FAQ -->
@@ -346,7 +438,7 @@
   <div class="faq__head">
     <p class="label label--bronze">06 — Perguntas</p>
     <h2 class="display display--xl">O que o conselho <em>costuma perguntar.</em></h2>
-    <p class="faq__lead">As dúvidas mais diretas sobre atuação, contratação e operação — reunidas para apoiar a decisão do conselho e da assembleia.</p>
+    <p class="faq__lead">As dúvidas mais diretas sobre atuação, contratação e operação, reunidas para apoiar a decisão do conselho e da assembleia.</p>
   </div>
 
   <div class="faq" id="faqList">
@@ -426,7 +518,7 @@
       <ol class="proposal__steps">
         <li class="proposal__step reveal">
           <span class="proposal__num mono">01.</span>
-          <div><h3>Envio dos dados</h3><p>Condomínio, unidades e contato — leva menos de um minuto.</p></div>
+          <div><h3>Envio dos dados</h3><p>Condomínio, unidades e contato. Leva menos de um minuto.</p></div>
         </li>
         <li class="proposal__step reveal">
           <span class="proposal__num mono">02.</span>
@@ -530,10 +622,9 @@
     <button class="drawer__close" id="drawerClose" aria-label="Fechar menu">×</button>
   </div>
   <nav class="drawer__links">
+    <a href="#topo">Início</a>
     <a href="#servicos">Serviços</a>
-    <a href="#sobre">Sobre</a>
-    <a href="#pratica">Na prática</a>
-    <a href="#faq">FAQ</a>
+    <a href="#sobre">Trajetória</a>
     <a href="#contato">Contato</a>
   </nav>
   <a class="btn btn--solid drawer__cta" href="https://wa.me/5521970590248" target="_blank" rel="noopener">Falar com o síndico</a>
@@ -655,6 +746,21 @@
     <h3 class="faq-modal__question" id="faqModalQuestion"></h3>
     <p class="faq-modal__answer" id="faqModalAnswer"></p>
     <a class="btn btn--ghost faq-modal__cta" href="https://wa.me/5521970590248?text=Ol%C3%A1%2C%20vim%20atrav%C3%A9s%20do%20site%20e%20gostaria%20de%20tirar%20uma%20d%C3%BAvida%20com%20a%20equipe." target="_blank" rel="noopener">Ainda com dúvida? Falar com a equipe</a>
+  </div>
+</div>
+
+<!-- VÍDEO — modal ultra premium (hero) -->
+<div id="videoModal" class="video-modal" role="dialog" aria-modal="true" aria-label="Vídeo do fundador" aria-hidden="true">
+  <div class="video-modal__overlay" id="videoModalOverlay"></div>
+  <div class="video-modal__box">
+    <div class="video-modal__frame">
+      <video id="videoModalVideo" controls playsinline preload="metadata">
+        <source src="assets/jw-gestao-condominios-valores-sindico-reel.mp4" type="video/mp4">
+      </video>
+      <button class="portrait__btn video-modal__close" id="videoModalClose" aria-label="Fechar">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" width="16" height="16" aria-hidden="true"><path d="M18 6L6 18M6 6l12 12"/></svg>
+      </button>
+    </div>
   </div>
 </div>
 

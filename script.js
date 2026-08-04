@@ -7,11 +7,51 @@
   const $ = (s, c = document) => c.querySelector(s);
   const $$ = (s, c = document) => Array.from(c.querySelectorAll(s));
 
-  /* --- navbar: condensa após 80px --- */
-  const nav = $('#nav');
-  const onScroll = () => nav.classList.toggle('is-stuck', window.scrollY > 80);
-  window.addEventListener('scroll', onScroll, { passive: true });
-  onScroll();
+
+  /* --- hero: vídeo do fundador, som e expandir --- */
+  const portraitVideo = $('.portrait__video');
+  const portraitMute = $('#portraitMute');
+  const portraitExpand = $('#portraitExpand');
+  if (portraitVideo && portraitMute) {
+    const iconMuted = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="16" height="16" aria-hidden="true"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><line x1="23" y1="9" x2="17" y2="15"/><line x1="17" y1="9" x2="23" y2="15"/></svg>';
+    const iconUnmuted = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="16" height="16" aria-hidden="true"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg>';
+    portraitMute.addEventListener('click', () => {
+      portraitVideo.muted = !portraitVideo.muted;
+      const isMuted = portraitVideo.muted;
+      portraitMute.innerHTML = isMuted ? iconMuted : iconUnmuted;
+      portraitMute.setAttribute('aria-pressed', String(!isMuted));
+      portraitMute.setAttribute('aria-label', isMuted ? 'Ativar som' : 'Silenciar');
+    });
+  }
+  /* --- hero: modal ultra premium do vídeo --- */
+  const videoModal = $('#videoModal');
+  const videoModalVideo = $('#videoModalVideo');
+  const videoModalOverlay = $('#videoModalOverlay');
+  const videoModalClose = $('#videoModalClose');
+
+  if (portraitVideo && portraitExpand && videoModal && videoModalVideo) {
+    const openVideoModal = () => {
+      videoModalVideo.currentTime = portraitVideo.currentTime;
+      videoModalVideo.muted = false;
+      videoModal.classList.add('is-open');
+      videoModal.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
+      videoModalVideo.play();
+    };
+    const closeVideoModal = () => {
+      videoModal.classList.remove('is-open');
+      videoModal.setAttribute('aria-hidden', 'true');
+      document.body.style.overflow = '';
+      videoModalVideo.pause();
+    };
+
+    portraitExpand.addEventListener('click', openVideoModal);
+    videoModalOverlay.addEventListener('click', closeVideoModal);
+    videoModalClose.addEventListener('click', closeVideoModal);
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && videoModal.classList.contains('is-open')) closeVideoModal();
+    });
+  }
 
   /* --- menu mobile: drawer premium --- */
   const drawerToggle = $('#drawerToggle'), drawer = $('#drawer'),
@@ -117,6 +157,24 @@
     videos.forEach(o => { if (o !== v) o.pause(); });
   }));
 
+  /* --- gestão na prática: play custom nos vídeos do carrossel --- */
+  $$('.reel__box').forEach(box => {
+    const v = $('video', box);
+    if (!v) return;
+    box.addEventListener('click', () => {
+      const reel = box.closest('.reel');
+      if (reel && !reel.classList.contains('is-active')) return;
+      if (v.paused) {
+        v.controls = true;
+        v.muted = false;
+        v.play();
+      } else {
+        v.pause();
+      }
+    });
+    v.addEventListener('pause', () => { v.controls = false; });
+  });
+
   /* --- formulário: validação + serialização para WhatsApp --- */
   const form = $('#form');
   const status = $('#formStatus');
@@ -164,44 +222,90 @@
     form.reset();
   });
 
-  /* --- operação: spotlight fluido + parallax sutil --- */
-  const operacaoPanels = $$('.operacao__panel');
-  if (operacaoPanels.length && !reduce) {
-    operacaoPanels.forEach(panel => {
-      let tx = 0, ty = 0, mx = 0.5, my = 0.5, px = 0, py = 0, raf = null;
-
+  /* --- operação: spotlight fluido nos cards --- */
+  const operacaoCards = $$('.operacao__card');
+  if (operacaoCards.length && !reduce) {
+    operacaoCards.forEach(card => {
+      let tx = 0, ty = 0, mx = 0.5, my = 0.5, raf = null;
       const lerp = (a, b, n) => a + (b - a) * n;
 
       const tick = () => {
         raf = null;
-        tx = lerp(tx, mx, 0.08);
-        ty = lerp(ty, my, 0.08);
-        px = lerp(px, (mx - 0.5) * 24, 0.06);
-        py = lerp(py, (my - 0.5) * 16, 0.06);
-        panel.style.setProperty('--x', `${tx * 100}%`);
-        panel.style.setProperty('--y', `${ty * 100}%`);
-        panel.style.setProperty('--px', `${px}px`);
-        panel.style.setProperty('--py', `${py}px`);
-        if (panel.matches(':hover, :focus, :focus-within')) raf = requestAnimationFrame(tick);
+        tx = lerp(tx, mx, 0.1);
+        ty = lerp(ty, my, 0.1);
+        card.style.setProperty('--x', `${tx * 100}%`);
+        card.style.setProperty('--y', `${ty * 100}%`);
+        if (card.matches(':hover, :focus')) raf = requestAnimationFrame(tick);
       };
 
-      panel.addEventListener('mousemove', (e) => {
-        const r = panel.getBoundingClientRect();
+      card.addEventListener('mousemove', (e) => {
+        const r = card.getBoundingClientRect();
         mx = (e.clientX - r.left) / r.width;
         my = (e.clientY - r.top) / r.height;
         if (!raf) raf = requestAnimationFrame(tick);
       });
 
-      panel.addEventListener('mouseleave', () => {
-        mx = 0.5; my = 0.5;
-        if (!raf) raf = requestAnimationFrame(tick);
-      });
+      card.addEventListener('mouseleave', () => { mx = 0.5; my = 0.5; if (!raf) raf = requestAnimationFrame(tick); });
+      card.addEventListener('focus', () => { mx = 0.5; my = 0.5; if (!raf) raf = requestAnimationFrame(tick); });
+    });
+  }
 
-      panel.addEventListener('focus', () => {
-        mx = 0.5; my = 0.5;
-        if (!raf) raf = requestAnimationFrame(tick);
+  /* --- carrossel Gestão na prática: coverflow (prev/ativo/next) + painel sincronizado --- */
+  const reelsPratica = $('#reelsPratica');
+  if (reelsPratica) {
+    const currentEl = $('.pratica__counter-current');
+    const totalEl = $('.pratica__counter-total');
+    const nowPanel = $('.pratica__now');
+    const nowTag = $('[data-now="tag"]');
+    const nowTitle = $('[data-now="title"]');
+    const items = $$('.reel', reelsPratica);
+    const total = items.length;
+    if (totalEl) totalEl.textContent = String(total).padStart(2, '0');
+
+    let activeIndex = 1;
+
+    const applyClasses = (index) => {
+      const prevI = ((index - 2 + total) % total);
+      const activeI = index - 1;
+      const nextI = index % total;
+      items.forEach((item, i) => {
+        item.classList.remove('is-active', 'is-prev', 'is-next');
+        if (i === activeI) item.classList.add('is-active');
+        else if (i === prevI) item.classList.add('is-prev');
+        else if (i === nextI) item.classList.add('is-next');
+        else {
+          const v = $('video', item);
+          if (v && !v.paused) v.pause();
+        }
+      });
+    };
+
+    const goToIndex = (index) => {
+      index = ((index - 1 + total) % total) + 1;
+      if (index === activeIndex) return;
+      activeIndex = index;
+      applyClasses(index);
+
+      const item = items[index - 1];
+      if (currentEl) currentEl.textContent = String(index).padStart(2, '0');
+      if (nowPanel) {
+        nowPanel.classList.add('is-switching');
+        setTimeout(() => {
+          if (nowTag) nowTag.textContent = item.dataset.tag || '';
+          if (nowTitle) nowTitle.textContent = item.dataset.title || '';
+          nowPanel.classList.remove('is-switching');
+        }, 180);
+      }
+    };
+
+    items.forEach((item, i) => {
+      item.addEventListener('click', () => {
+        if (item.classList.contains('is-prev')) goToIndex(activeIndex - 1);
+        else if (item.classList.contains('is-next')) goToIndex(activeIndex + 1);
       });
     });
+
+    applyClasses(1);
   }
 })();
 
@@ -300,4 +404,5 @@
     if (autoHideTimer) clearTimeout(autoHideTimer);
     if (badgeTimer) clearTimeout(badgeTimer);
   });
+
 })();
